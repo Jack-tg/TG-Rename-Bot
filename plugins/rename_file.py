@@ -32,11 +32,12 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 from database.database import *
+FILENAME = (update.document.file_name)
 @pyrogram.Client.on_message(pyrogram.filters.document)
 async def document(bot,update):
   await bot.send_message(
          chat_id=update.chat.id,
-         text = f"{Filename}(update.document.file_name)",
+         text = f"{FILENAME}",
 reply_to_message_id=update.message_id
         
  )
