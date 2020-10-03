@@ -32,7 +32,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 from database.database import *
-@pyrogram.Client.on_message(pyrogram.Filters.document)
+@pyrogram.Client.on_message(pyrogram.filters.document)
 async def document(bot,update):
   await bot.send_message(
          chat_id=update.chat.id,
