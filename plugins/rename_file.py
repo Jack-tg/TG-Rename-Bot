@@ -33,14 +33,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@pyrogram.Client.on_message(pyrogram.filters.document)
-async def document(bot,update):
-  await bot.send_message(
-         chat_id=update.chat.id,
-         text = FILENAME:update.document.file_name,
-reply_to_message_id=update.message_id
-        
- )
+
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
